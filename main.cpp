@@ -2,7 +2,7 @@
 #include <limits>
 #include <sodium.h>
 
-void menu1() {
+void generateKeypair() {
     std::cout << "Generating keypair...\n";
 
     unsigned char public_key[crypto_kx_PUBLICKEYBYTES];
@@ -61,7 +61,7 @@ void runMenu () {
 
         // Evaluate menu choice
         if (choice == 1) {
-            menu1();
+            generateKeypair();
         } else if (choice == 2) {
             menu2();
         }
